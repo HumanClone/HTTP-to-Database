@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Cloud_Ice": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7079",
+      "launchBrowser": false
+    }
+  }
+}
