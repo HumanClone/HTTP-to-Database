@@ -33,13 +33,13 @@ namespace Cloud_Ice
             string responseMessage = string.IsNullOrEmpty(num)
                 ? "This HTTP triggered function executed successfully. Pass an id in the query string or in the request body for a personalized response."
                 : "ID not found in database";
-            
-          
+
+
             var str = Environment.GetEnvironmentVariable("sqldb_connection");
             using (SqlConnection conn = new SqlConnection(str))
             {
                 conn.Open();
-                  string command = "Insert Into Ids(Id) Values (" +id + ")";
+                string command = "Insert Into Ids(Id) Values (" + id + ")";
 
                 using (SqlCommand cmd = new SqlCommand(command, conn))
                 {
